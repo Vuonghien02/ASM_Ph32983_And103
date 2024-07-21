@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/image_login"
+    android:padding="16dp">
+
+    <!-- Hình ảnh logo hoặc ảnh nền -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/car_welcome" />
+
+    <!-- Dòng text "Đăng nhập" -->
+    <TextView
+        android:id="@+id/loginTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Đăng nhập"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!-- Trường email -->
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/custom_edit_text"
+        android:padding="10dp" />
+
+    <!-- Trường mật khẩu -->
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edit_text"
+        android:padding="10dp" />
+
+    <!-- Nút đăng nhập -->
+    <Button
+        android:id="@+id/btnLoginWithEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="20dp"
+        android:text="Login" />
+
+    <!-- Nút đăng ký -->
+    <TextView
+        android:id="@+id/btnSingUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Don't have an account? Register"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>
