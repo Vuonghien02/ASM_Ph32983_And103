@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgCarDetail"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/image_login" />
+
+    <EditText
+        android:id="@+id/edtTenDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên xe"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_edit_text" />
+
+    <EditText
+        android:id="@+id/edtNamSXDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Năm sản xuất"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_edit_text" />
+
+    <EditText
+        android:id="@+id/edtHangDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hãng"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_edit_text" />
+
+    <EditText
+        android:id="@+id/edtGiaDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Giá"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_edit_text" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:text="Giá:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Layout for quantity and buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Thêm vào giỏ hàng" />
+</LinearLayout>

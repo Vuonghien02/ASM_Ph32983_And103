@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart" />
+    <item
+        android:id="@+id/navigation_completed_orders"
+        android:icon="@drawable/ic_completed_orders"
+        android:title="Đơn hàng đã đạt" />
+</menu>

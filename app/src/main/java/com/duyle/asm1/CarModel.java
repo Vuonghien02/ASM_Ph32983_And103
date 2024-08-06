@@ -1,6 +1,9 @@
 package com.duyle.asm1;
 
-public class CarModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class CarModel implements Parcelable {
     private String _id;
     private String ten;
     private int namSX;
@@ -72,5 +75,42 @@ public class CarModel {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    // Parcelable implementation
+    protected CarModel(Parcel in) {
+        _id = in.readString();
+        ten = in.readString();
+        namSX = in.readInt();
+        hang = in.readString();
+        gia = in.readDouble();
+        imageUrl = in.readString();
+    }
+
+    public static final Creator<CarModel> CREATOR = new Creator<CarModel>() {
+        @Override
+        public CarModel createFromParcel(Parcel in) {
+            return new CarModel(in);
+        }
+
+        @Override
+        public CarModel[] newArray(int size) {
+            return new CarModel[size];
+        }
+    };
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(_id);
+        dest.writeString(ten);
+        dest.writeInt(namSX);
+        dest.writeString(hang);
+        dest.writeDouble(gia);
+        dest.writeString(imageUrl);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 }
